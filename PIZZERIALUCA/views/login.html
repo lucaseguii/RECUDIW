@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../scss/common.css">
+</head>
+<body class="bg-[#FDF4E3] text-[#A62735]">
+    <header class="bg-[#A62735] text-[#FDF4E3] pb-4 mb-8">
+        <div class="flex flex-col items-center justify-center">
+            <img src="../assets/img/logoblack.png" class="w-32 h-32 md:w-48 md:h-48" alt="Logo">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center">Pizzeria Italiana Luca</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-8 justify-center mt-4 text-lg md:text-xl">
+                <li><a href="../src/index.html" class="hover:text-[#ffffff] hover:font-extrabold">Inici</a></li>
+                <li><a href="../views/carta.html" class="hover:text-[#ffffff] hover:font-extrabold">Carta</a></li>
+                <li class="hidden"><a href="../views/gestio.html" class="hover:text-[#ffffff] hover:font-extrabold">Gestió</a></li>
+                <li><a href="../views/login.html" class="hover:text-[#ffffff] hover:font-extrabold">Iniciar Sessió</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <main>
+        <div class="flex justify-center items-center bg-gray-100 mb-8" >
+            <div class="p-4 bg-white rounded-lg shadow-md w-full max-w-sm mx-4 md:max-w-md md:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Inicia sessió</h2>
+                <form action="#" method="POST">
+                    <div class="flex flex-col mb-4">
+                        <label for="username" class="text-lg font-semibold mb-2">Nom d'usuari:</label>
+                        <input type="text" name="username" id="username" required placeholder="Introdueix el teu usuari" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                    </div>
+    
+                    <div class="flex flex-col mb-4">
+                        <label for="password" class="text-lg font-semibold mb-2">Contrassenya:</label>
+                        <input type="password" name="password" id="password" required placeholder="Introdueix la teva contrassenya" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                    </div>
+    
+                    <div class="flex justify-center">
+                        <button type="submit" class="buttons">Iniciar sessió</button>
+                    </div>
+                </form>
+    
+                <p class="mt-4 text-center">
+                    <a href="../views/recuperarContrassenya.html" class="text-[#1E7040] underline">Has oblidat la contrassenya?</a>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,333 @@
+@font-face {
+    font-family: Barlow;
+    src: url('./assets/fonts/Barlow/Barlow-Regular.ttf')
+}
+
+
+@font-face {
+    font-family: Fraunces;
+    src: url('./assets/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf')
+}
+
+:root {
+    /** PRIMARY COLOURS*/
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --cyan: #90d4c5;
+
+
+    /** NEUTRAL COLOURS*/
+
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: Barlow;
+    height: 100vH;
+}
+
+h1,
+#nav-menu button.contact-btn {
+    font-family: Fraunces;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 800;
+    padding: 50px 0;
+    letter-spacing: 0.2em;
+}
+
+/* MOBILE */
+/* Header */
+.bg-image {
+    background-size: cover;
+}
+
+header {
+    background-image: url('./assets/images/mobile/image-header.jpg');
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    padding: 15px;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+#nav-menu.nav-visible {
+    display: flex;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-menu {
+    display: none;
+    background-color: var(--white);
+    flex-direction: column;
+    position: absolute;
+    width: calc(100% - 30px);
+    top: 75px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+#nav-menu button {
+    background-color: transparent;
+    color: var(--dark-grayish-blue);
+    border: none;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#nav-menu button.contact-btn {
+    background-color: var(--yellow);
+    color: var(--very-dark-desaturated-blue);
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+.image-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+.image-gallery img{
+    width: 100%;
+    height: 100%;
+}
+
+section.main-section-info{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+section.transform {
+    background-image: url('./assets/images/mobile/image-transform.jpg');
+    height: 350px;
+}
+
+section.stand-out {
+    background-image: url('./assets/images/mobile/image-stand-out.jpg');
+    height: 350px;
+}
+
+section.graphic-design {
+    background-image: url('./assets/images/mobile/image-graphic-design.jpg');
+    height: 700px;
+}
+
+section.photography {
+    background-image: url('./assets/images/mobile/image-photography.jpg');
+    height: 700px;
+}
+
+
+
+.graphic-design {
+    position: relative;
+    text-align: center;}
+
+.graphic-design h2, .graphic-design p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.graphic-design h2 {
+    top: 60%; 
+    font-size: 2rem;
+  }
+
+.graphic-design p {
+    top: 70%;
+    font-size: 1rem;
+}
+
+.photography {
+    position: relative;
+    text-align: center;}
+
+.photography h2, .photography p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.photography h2 {
+    top: 60%; 
+    font-size: 2rem;
+  }
+
+.photography p {
+    top: 70%;
+    font-size: 1rem;
+}
+
+section.testimonials{
+    text-align: center;
+}
+
+.article1, .article2, .article3{
+    margin: 10px;
+}
+
+section.testimonials img{
+    border-radius: 100%;
+}
+
+footer{
+    background-color: var(--cyan);
+    text-align: center;
+    padding: 20px;
+}
+footer .contact-btn{
+    display: none;
+}
+footer .bg-image{
+    color: var(--dark-moderate-cyan);
+}
+
+.footer-logo{
+    height: 25px;
+    background-color: var(--dark-desaturated-cyan);
+    mask: url("./assets/images/logo.svg") no-repeat center;
+    -webkit-mask: url("./assets/images/logo.svg") no-repeat center; /* Compatibilidad con Safari */
+}
+
+
+#nav-footer button {
+    background-color: transparent;
+    color: var(--dark-moderate-cyan);
+    border: none;
+    padding: 20px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+
+@media (width >= 1440px){
+    #mobile-menu-btn {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: flex; 
+        flex-direction: row;
+        gap: 20px; 
+        background-color: transparent; 
+        position: static; 
+        width: auto; 
+        padding: 0; 
+    }
+    
+    #nav-menu button {
+        font-size: 1rem; 
+        padding: 10px 15px; 
+        background-color: transparent; 
+        color: var(--white);
+        border: none; 
+        cursor: pointer;
+    }
+    
+    #nav-menu button.contact-btn {
+        background-color: var(--white); 
+        color: black;
+        padding: 10px 20px; 
+        border-radius: 25px; 
+        font-weight: 700;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "info transform"
+        "stand-out info2"
+        "graphic-design photography"
+        "testimonials testimonials"
+        "image-gallery image-gallery"     
+        ;
+    }   
+    .main-section-info{
+        grid-area: info;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    section.transform{
+        grid-area: transform;
+    }
+    .main-section-info:nth-of-type(2) {
+        grid-area: info2;
+    }
+    section.stand-out {
+        grid-area: stand-out; 
+    } 
+    section.photography {
+        grid-area: photography; 
+    }
+    section.graphic-design {
+        grid-area: graphic-design; 
+    }
+
+    section.testimonials{
+        grid-area: testimonials;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+    }
+    section.testimonials div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    section.transform, section.stand-out, section.main-section-info{
+        height: 550px;
+    }
+    .image-gallery{
+        grid-area: image-gallery;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: stretch;
+    }
+    
+}

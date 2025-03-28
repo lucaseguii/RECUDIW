@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizzeria Italiana Luca</title>
+        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="../scss/common.css">
+
+    </head>
+    <body class="bg-[#FDF4E3] text-[#A62735]">
+        <header class="bg-[#A62735] text-[#FDF4E3] pb-4">
+            <div class="flex flex-col items-center justify-center">
+                <img src="../assets/img/logoblack.png" class="w-32 h-32 md:w-48 md:h-48" alt="Logo">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-center">Pizzeria Italiana Luca</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-8 justify-center mt-4 text-lg md:text-xl">
+                    <li><a href="#" class="hover:text-[#ffffff] hover:font-extrabold">Inici</a></li>
+                    <li><a href="../views/carta.html" class="hover:text-[#ffffff] hover:font-extrabold">Carta</a></li>
+                    <li class="hidden"><a href="../views/gestio.html" class="hover:text-[#ffffff] hover:font-extrabold">Gestió</a></li>
+                    <li><a href="../views/login.html" class="hover:text-[#ffffff] hover:font-extrabold">Iniciar Sessió</a></li>
+                </ul>   
+            </nav>
+        </header>
+
+        <main class="p-4">
+            <section class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mt-6">Pizzes artesanes amb ingredients frescos</h2>
+                <p class="text-lg md:text-xl mt-4 text-[#1E7040]">Disfruta de les nostres pizzes fetes al forn de llenya</p>
+                <div class="mb-8 mt-4 flex flex-col md:flex-row md:justify-center md:gap-4 px-6">
+                        <img src="../assets/img/local.png" class="flex-shrink-0 w-full max-w-xs md:max-w-full md:w-1/3 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] mb-4 md:mb-0 md:ml-6" alt="Local">
+                        <img src="../assets/img/pizza.jpg" class="flex-shrink-0 w-full max-w-xs md:max-w-full md:w-1/3 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] mb-4 md:mb-0" alt="Pizza">
+                        <img src="../assets/img/lletrespizzeria.png" class="flex-shrink-0 w-full max-w-xs md:max-w-full md:w-1/3 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] md:mr-6" alt="Lletres">
+                    </div>
+            </section>
+            <section class="mt-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Pizzes destacades</h2>
+                <div class="mt-6 grid gap-8 md:grid-cols-3">
+                    <article class="text-center">
+                        <strong class="text-xl md:text-2xl block">Pizza Margarita</strong>
+                        <p class="text-[#1E7040] text-lg md:text-xl">Amb tomàquet, mozzarella i alfàbrega fresca.</p>
+                        <img src="../assets/img/margarita.png" class="w-72 h-72 hidden md:block md:w-80 md:h-80 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] mt-4">
+                    </article>
+            
+                    <article class="text-center">
+                        <strong class="text-xl md:text-2xl block">Pizza Frankfurt</strong>
+                        <p class="text-[#1E7040] text-lg md:text-xl">Una explosió de salsitxes repartides per tota la pizza.</p>
+                        <img src="../assets/img/frankfurt.png" class="w-72 h-72 hidden md:block md:w-80 md:h-80 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] mt-4">
+                    </article>
+            
+                    <article class="text-center">
+                        <strong class="text-xl md:text-2xl block">Pizza Prosciutto</strong>
+                        <p class="text-[#1E7040] text-lg md:text-xl">Amb una barbatritat de pernil dolç i mozzarella.</p>
+                        <img src="../assets/img/jamon.png" class="w-72 h-72 hidden md:block md:w-80 md:h-80 mx-auto rounded-lg shadow-md border-4 border-[#E74D38] mt-4">
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-[#A62735] text-[#FDF4E3] p-4 text-center text-lg md:text-xl">
+            <p><strong>Horari:</strong> de dilluns a diumenge de 12:00 a 16:00 i de 19:00 a 23:00</p>
+            <p><strong>Adreça:</strong> Carrer Major, 123, 07730 Alaior</p>
+            <p><strong>Telèfon:</strong> 971 37 45 67</p>
+        </footer>
+    </body>
+    </html>

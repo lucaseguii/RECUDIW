@@ -1,0 +1,43 @@
+@font-face {
+    font-family: EBGaramond;
+    src: url('../assets/fonts/EBGaramond/EBGaramond-Regular.ttf')
+}
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf')
+}
+
+$font-eb-garamond: 'EBGaramond', serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+body{
+    font-family: $font-montserrat;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-eb-garamond;
+}
+
+p, span, li, a, strong, form, input, textarea, button{
+    font-family: $font-montserrat;
+}
+
+@mixin button-style($bg-color, $text-color, $hover-bg-color) {
+    width: 12rem; 
+    background-color: $bg-color; 
+    color: $text-color; 
+    padding: 1rem; 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+
+    &:hover {
+        background-color: $hover-bg-color; 
+    }
+}
+.buttons {
+    @include button-style(#A62735, #FDF4E3, #E74D38);
+}
