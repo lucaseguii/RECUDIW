@@ -7,8 +7,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
-    --color-gray-100: oklch(0.967 0.003 264.542);
-    --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
     --container-sm: 24rem;
@@ -235,6 +233,9 @@
   }
   .sticky {
     position: sticky;
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
   }
   .isolate {
     isolation: isolate;
@@ -1139,9 +1140,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1150,9 +1148,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
