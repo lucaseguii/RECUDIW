@@ -33,12 +33,15 @@
         console.log("Existeix es superusuari")
       }catch (error){
         if (error.code === "auth/user-not-found") {
+
           const superUsuari = await createUserWithEmailAndPassword(auth, superUsuariEmail, superUsuariPassword);
+          console.log("UID del superusuari:", superUsuari.user.uid);
 
           const docSuperUsuari = await addDoc(collection(db, "users"), {
-            email: superUsuariEmail
+            email: superUsuariEmail,
+            rol: "superusuari",
           });
-          console.log("Superusuari creat", docSuperUsuari.email);
+          console.log("Superusuari creat", superUsuariEmail);
           
       } else {
           console.log("error");

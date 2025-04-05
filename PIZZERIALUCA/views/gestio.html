@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestio</title>
-    <link rel="stylesheet" href="../src/output.css">
+    <title>Gestió</title>
+    <link rel="stylesheet" href="../src/output.css"> 
     <link rel="stylesheet" href="../scss/common.css">
 </head>
 <body class="bg-[#FDF4E3] text-[#A62735]">
+
     <header class="bg-[#A62735] text-[#FDF4E3] pb-4">
         <div class="flex flex-col items-center justify-center">
             <img src="../assets/img/logoblack.png" class="w-32 h-32 p-2 md:w-48 md:h-48" alt="Logo">
@@ -15,27 +16,33 @@
         </div>
         <nav>
             <ul class="flex space-x-8 justify-center mt-4 text-lg md:text-xl">
-                <li><a href="../src/index.html" class="hover:text-[#ffffff] hover:font-extrabold">Inici</a></li>
-                <li><a href="../views/carta.html" class="hover:text-[#ffffff] hover:font-extrabold">Carta</a></li>
-                <li><a href="#" class="hover:text-[#ffffff] hover:font-extrabold">Gestió</a></li>
-                <li class="hidden"><a href="../views/login.html" class="hover:text-[#ffffff] hover:font-extrabold">Iniciar Sessió</a></li>
+                <li><a href="../src/index.html" class="hover:text-white hover:font-extrabold">Inici</a></li>
+                <li><a href="../views/carta.html" class="hover:text-white hover:font-extrabold">Carta</a></li>
+                <li><a href="#" class="hover:text-white hover:font-extrabold">Gestió</a></li>
+                <li class="hidden"><a href="../views/login.html" class="hover:text-white hover:font-extrabold">Iniciar Sessió</a></li>
             </ul>   
         </nav>
     </header>
-    <main class="p-4 mb-8">
-        <div class="flex justify-center items-center  mb-4" >
-            <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Gestió</h2>
-        </div>
-        <div>
-            <a href="../views/usuaris.html"><button class="buttons">Usuaris</button></a>
-            <a href="../views/plats.html"><button class="buttons">Plats</button></a>
-        </div>
-    </main> 
-    <footer class="bg-[#A62735] text-[#FDF4E3] fixed bottom-0 p-4 text-center">
+
+    <main class="p-4 mb-24">
+        <section class="text-center mb-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-8 mb-4">Gestió</h2>
+            <p class="text-lg md:text-xl text-[#1E7040]">Gestiona fàcilment usuaris i plats</p>
+        </section>
+
+        <section class="flex flex-col mb-4 md:flex-row justify-center gap-6 items-center">
+            <a href="../views/usuaris.html" class="p-4">
+                <button class="buttons">Usuaris</button></a>
+            <a href="../views/plats.html">
+                <button class="buttons">Plats</button></a>
+        </section>
+    </main>
+
+    <footer class="bg-[#A62735] text-[#FDF4E3] fixed bottom-0 w-full p-4 text-center text-lg md:text-xl">
         <p><strong>Horari:</strong> de dilluns a diumenge de 12:00 a 16:00 i de 19:00 a 23:00</p>
         <p><strong>Adreça:</strong> Carrer Major, 123, 07730 Alaior</p>
         <p><strong>Telèfon:</strong> 971 37 45 67</p>
-    </footer>   
+    </footer>
+
 </body>
-</html>   
-    
+</html>

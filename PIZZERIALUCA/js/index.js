@@ -1,5 +1,5 @@
-$( document ).ready(function() {
+import { createSuperUsuari } from './firebase.js';
 
-
-
+$(document).ready(function() {
+    createSuperUsuari();
 });
