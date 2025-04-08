@@ -19,27 +19,43 @@
             <ul class="flex space-x-8 justify-center mt-4 text-lg md:text-xl">
                 <li><a href="../src/index.html" class="hover:text-white hover:font-extrabold">Inici</a></li>
                 <li><a href="../views/carta.html" class="hover:text-white hover:font-extrabold">Carta</a></li>
-                <li class="hidden"><a href="#" class="hover:text-white hover:font-extrabold">Gestió</a></li>
+                <li><a href="../views/gestio.html" class="hover:text-white hover:font-extrabold">Gestió</a></li>
                 <li class="hidden"><a href="../views/login.html" class="hover:text-white hover:font-extrabold">Iniciar Sessió</a></li>
             </ul>   
         </nav>
     </header>
     <main class="p-4 mb-24">
+        <section class="text-center mb-4">
         <h2 class="text-3xl md:text-4xl font-extrabold mt-8 mb-4">Usuaris</h2>
-        <button class="material-symbols-outlined">person_add</button>
-        
-    <table>
-        <thead>
-            <tr>
-                <th>Gmail</th>
-                <th>Contrassenya</th>
-                <th>Rol</th>
-                <th>Accions</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    </section>
+
+    <section class="ml-[20px] sm:ml-[50px] md:ml-[100px] lg:ml-[250px] mb-4">
+        <button class="material-symbols-outlined buttons-admin">person_add</button>
+    </section>
+    <section class="flex flex-col mb-4 md:flex-row justify-center gap-6 items-center">
+            <table class="min-w-[75%] mx-8 border-collapse border table-fixed">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Gmail</th>
+                        <th class="px-4 py-2 hidden md:table-cell text-left">Contrassenya</th>
+                        <th class="px-4 py-2 hidden md:table-cell text-left">Rol</th>
+                        <th class="px-4 py-2 text-left">Accions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-2 text-[#1E7040]">exemple@gmail.com</td>
+                        <td class="px-4 py-2 text-[#1E7040] hidden md:table-cell">12345</td>
+                        <td class="px-4 py-2 text-[#1E7040] hidden md:table-cell">Admin</td>
+                        <td class="px-4 py-2">
+                            <button class="material-symbols-outlined buttons-admin">edit</button>
+                            <button class="material-symbols-outlined buttons-admin">delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>    
+          
 </main>
 </body>
 </html>

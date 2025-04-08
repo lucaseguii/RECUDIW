@@ -10,7 +10,7 @@
 <body class="bg-[#FDF4E3] text-[#A62735]">
     <header class="bg-[#A62735] text-[#FDF4E3] pb-4 mb-8">
         <div class="flex flex-col items-center justify-center">
-            <img src="../assets/img/logoblack.png" class="w-32 h-32 md:w-48 md:h-48" alt="Logo">
+            <img src="../assets/img/logoblack.png" class="w-32 h-32 p-2 md:w-48 md:h-48" alt="Logo">
             <h1 class="text-3xl md:text-4xl font-extrabold text-center">Pizzeria Italiana Luca</h1>
         </div>
         <nav>
@@ -28,8 +28,8 @@
                 <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Inicia sessió</h2>
                 <form action="#">
                     <div class="flex flex-col mb-4">
-                        <label for="username" class="text-lg font-semibold mb-2">Nom d'usuari:</label>
-                        <input type="text" name="username" id="username" required placeholder="Introdueix el teu usuari" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                        <label for="email" class="text-lg font-semibold mb-2">Gmail:</label>
+                        <input type="text" name="email" id="email" required placeholder="Introdueix el teu gmail" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
                     </div>
     
                     <div class="flex flex-col mb-4">
@@ -38,7 +38,7 @@
                     </div>
     
                     <div class="flex justify-center">
-                        <button type="submit" class="buttons">Iniciar sessió</button>
+                        <button type="submit" class="buttons" id="login-btn">Iniciar sessió</button>
                     </div>
                 </form>
     

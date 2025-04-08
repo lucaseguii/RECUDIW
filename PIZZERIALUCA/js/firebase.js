@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
   import { getFirestore, collection, addDoc, getDocs} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -50,4 +50,15 @@
         console.error("Error en crear superusuari:", error);
       }
 };
+
+export const iniciarSessio = async (email, password) => {
+  try {
+    const usercheck = await signInWithEmailAndPassword(auth, email, password);
+    console.log("Inici de sessio be", usercheck.user);
+    window.location.href = "../views/gestio.html"; 
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+};
+
   

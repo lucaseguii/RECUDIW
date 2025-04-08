@@ -23,8 +23,8 @@ p, span, li, a, strong, form, input, textarea, button{
     font-family: $font-montserrat;
 }
 
-@mixin button-style($bg-color, $text-color, $hover-bg-color) {
-    width: 12rem; 
+@mixin button-style($bg-color, $text-color, $hover-bg-color, $width) {
+    width: $width; 
     background-color: $bg-color; 
     color: $text-color; 
     padding: 1rem; 
@@ -39,5 +39,9 @@ p, span, li, a, strong, form, input, textarea, button{
     }
 }
 .buttons {
-    @include button-style(#A62735, #FDF4E3, #E74D38);
+    @include button-style(#A62735, #FDF4E3, #E74D38, 12rem);
+}
+.buttons-admin{
+    @include button-style(#A62735, #FDF4E3, #E74D38, 4rem);
+
 }

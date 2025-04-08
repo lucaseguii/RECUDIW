@@ -31,4 +31,19 @@ p, span, li, a, strong, form, input, textarea, button {
 }
 .buttons:hover {
   background-color: #E74D38;
+}
+
+.buttons-admin {
+  width: 4rem;
+  background-color: #A62735;
+  color: #FDF4E3;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.buttons-admin:hover {
+  background-color: #E74D38;
 }/*# sourceMappingURL=common.css.map */
