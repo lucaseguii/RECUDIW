@@ -19,7 +19,7 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
-  const auth = getAuth(app);
+ const auth = getAuth(app);
   
   const db = getFirestore(app);
 
@@ -55,13 +55,7 @@ export const iniciarSessio = async (email, password) => {
   try {
     const usercheck = await signInWithEmailAndPassword(auth, email, password);
     console.log("Inici de sessio be", usercheck.user);
-
-    const loginLogoutBtn = document.getElementById('login-logout-btn a');
-    if (loginLogoutBtn) {
-      loginLogoutBtn.innerHTML = '<a href="#" class="hover:text-white hover:font-extrabold">Tancar Sessió</a>';
-    }
-
-    window.location.href = "../views/gestio.html"; 
+    window.location.href = "../views/gestio.html";
   } catch (error) {
     console.error("Error:", error);
   }

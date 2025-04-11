@@ -1,17 +1,17 @@
 @font-face {
   font-family: EBGaramond;
-  src: url("../assets/fonts/EBGaramond/EBGaramond-Regular.ttf");
+  src: url("/assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
 body {
   font-family: "Montserrat", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "EBGaramond", serif;
+  font-family: "EBGaramond", sans-serif;
 }
 
 p, span, li, a, strong, form, input, textarea, button {

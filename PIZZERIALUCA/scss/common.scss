@@ -1,15 +1,15 @@
 @font-face {
     font-family: EBGaramond;
-    src: url('../assets/fonts/EBGaramond/EBGaramond-Regular.ttf')
+    src: url('/assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf')
 }
 
 
 @font-face {
     font-family: Montserrat;
-    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf')
+    src: url('/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
 }
 
-$font-eb-garamond: 'EBGaramond', serif;
+$font-eb-garamond: 'EBGaramond', sans-serif;
 $font-montserrat: 'Montserrat', sans-serif;
 
 body{
