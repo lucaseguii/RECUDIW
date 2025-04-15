@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut  } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
   import { getFirestore, collection, addDoc, getDocs} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -91,6 +91,22 @@ export const crearUsuari = async (email, password, rol) => {
   }
 };
 
-export const checkIFUserIsLogin = () => {
-  
-}
+export const checkIfUserIsLogin = (callback) => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      callback(true, user);
+    } else {
+      callback(false, null);
+    }
+  });
+};
+
+export const tancarSessio = async () => {
+  try {
+    await signOut(auth);
+    console.log("Sessió tancada");
+    window.location.href = "../src/index.html";
+  } catch (error) {
+    console.error("Error", error);
+  }
+};
