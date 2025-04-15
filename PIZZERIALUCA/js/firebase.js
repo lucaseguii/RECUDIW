@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
   import { getFirestore, collection, addDoc, getDocs} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -60,3 +60,37 @@ export const iniciarSessio = async (email, password) => {
     console.error("Error:", error);
   }
 };
+
+export const getUsuaris = async () => {
+  try {
+    const firebaseUsers = await getDocs(collection(db, "users"));
+    const usuaris = [];
+    firebaseUsers.forEach((doc) => {
+      usuaris.push({ id: doc.id, ...doc.data() });
+    });
+    return usuaris;
+  } catch (error) {
+    console.error("Error obtenint usuaris:", error);
+    return [];
+  }
+};
+
+export const crearUsuari = async (email, password, rol) => {
+  try {
+    const userCreate = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCreate.user;
+    await addDoc(collection(db, "users"), {
+      email: email,
+      password: password,
+      rol: rol,
+    });
+
+    console.log("Usuari creat be:", user.email);
+  } catch (error) {
+    console.error("Error en crear usuari:", error);
+  }
+};
+
+export const checkIFUserIsLogin = () => {
+  
+}

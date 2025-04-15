@@ -25,7 +25,7 @@
         </nav>
     </header>
     <main class="p-4 mb-24 flex flex-col justify-center ">
-    <section class="ml-[20px] sm:ml-[50px] md:ml-[100px] lg:ml-[250px] mb-4">
+      <section class="mx-auto mb-4 w-full max-w-lg">
         <div class="flex justify-center items-center mb-4">
           <div class="bg-[#FDF4E3] p-4 rounded-lg shadow-md w-full max-w-sm mx-4 md:max-w-md md:px-8">
             <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Crear Usuari</h2>
@@ -42,17 +42,18 @@
       
               <div class="flex flex-col mb-4">
                 <label for="role" class="text-lg font-semibold mb-2">Rol:</label>
-                <input type="text" name="role" id="role" value="User" readonly class="p-4 border-2 border-[#A62735] bg-gray-100 text-gray-600 rounded-lg cursor-not-allowed">
+                <input type="text" name="role" id="role" value="user" readonly class="p-4 border-2 border-[#A62735] bg-gray-100 text-gray-600 rounded-lg cursor-not-allowed">
               </div>
       
               <div class="flex justify-center">
-                <button type="submit" class="buttons" id="login-btn">Crear</button>
+                <button type="submit" class="buttons" id="create-user-btn">Crear</button>
               </div>
             </form>
           </div>
         </div>
       </section>
-      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="module" src="../js/crearUsuari.js"></script>          
 </main>
 </body>
 </html>
