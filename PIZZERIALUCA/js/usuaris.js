@@ -12,7 +12,7 @@ $(document).ready(async () => {
             <td class="px-4 py-2 text-[#1E7040] hidden md:table-cell">${usuari.rol}</td>
             <td class="px-4 py-2">
               <button class="material-symbols-outlined buttons-admin">edit</button>
-              <button class="material-symbols-outlined buttons-admin">delete</button>
+              <button class="material-symbols-outlined buttons-admin " id="delete-user-btn">delete</button>
             </td>
           </tr>
         `;
