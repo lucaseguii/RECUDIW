@@ -1,16 +1,17 @@
 import { eliminarUsuari } from "./firebase.js";
 
 $(document).ready(() => {
-  $("#delete-user-btn").on("click", async function () {
+  $("table").on("click", "#delete-user-btn", async function () {
     const userId = $(this).data("userid");
-    if (confirm("Estàs segur que vols eliminar aquest usuari?")) {
+    console.log("User ID:", userId);
+    if (confirm("Segur que vols eliminar aquest usuari?")) {
       try {
         await eliminarUsuari(userId);
-        alert("Usuari eliminat correctament.");
+        alert("Usuari eliminat be");
         location.reload();
       } catch (error) {
-        console.error("Error eliminant l'usuari:", error);
-        alert("No s'ha pogut eliminar l'usuari. Si us plau, torna-ho a intentar.");
+        console.error("Error eliminant lusuari", error);
+        alert("No sha pogut eliminar usuari");
       }
     }
   });
