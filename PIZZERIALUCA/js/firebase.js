@@ -113,7 +113,7 @@ export const tancarSessio = async () => {
 
 export const eliminarUsuari = async (userId) => {
   try {
-    console.log("Intentando eliminar usuario con ID:", userId);
+    console.log("Intentant eliminar usuari amb ID:", userId);
     const userDocRef = doc(db, "users", userId);
     await deleteDoc(userDocRef);
     console.log("Usuari eliminat correctament");
@@ -129,5 +129,47 @@ export const editarUsuari = async (userId, updatedUser) => {
     console.log("Usuari actualitzat be");
   } catch (error) {
     console.error("Error", error);
+  }
+};
+
+
+//plats
+export const getPlats = async () => {
+  try {
+    const firebasePlats = await getDocs(collection(db, "plats"));
+    const plats = [];
+    firebasePlats.forEach((doc) => {
+      plats.push({ id: doc.id, ...doc.data() });
+    });
+    return plats;
+  } catch (error) {
+    console.error("Error obtenint plats:", error);
+    return [];
+  }
+};
+
+export const eliminarPlat = async (platId) => {
+  try {
+    console.log("Intentant eliminar plat amb ID:", platId);
+    const platDocRef = doc(db, "users", platId);
+    await deleteDoc(platDocRef);
+    console.log("plat eliminat be");
+  } catch (error) {
+    console.error("Error eliminant plat:", error);
+  }
+};
+
+//categories
+export const getCategories = async () => {
+  try {
+    const firebaseCategories = await getDocs(collection(db, "categories"));
+    const categories = [];
+    firebaseCategories.forEach((doc) => {
+      categories.push({ id: doc.id, ...doc.data() });
+    });
+    return categories;
+  } catch (error) {
+    console.error("Error obtenint categories:", error);
+    return [];
   }
 };

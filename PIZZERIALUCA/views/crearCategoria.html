@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuaris</title>
+    <title>Crear Plat</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="../scss/common.css">
@@ -25,40 +25,27 @@
         </nav>
     </header>
     <main class="p-4 mb-24 flex flex-col justify-center ">
-      <section class="mb-4">
-        <a href="/views/usuaris.html" class="flex items-center text-[#A62735] hover:text-[#1E7040]">
-          <span class="material-symbols-outlined text-5xl font-extrabold">arrow_back</span>
-        </a>
-      </section>
-      <section class="mx-auto mb-4 w-full max-w-lg">
+        <section class="mb-4">
+            <a href="/views/plats.html" class="flex items-center text-[#A62735] hover:text-[#1E7040]">
+              <span class="material-symbols-outlined text-5xl font-extrabold">arrow_back</span>
+            </a>
+          </section>      <section class="mx-auto mb-4 w-full max-w-lg">
         <div class="flex justify-center items-center mb-4">
           <div class="bg-[#FDF4E3] p-4 rounded-lg shadow-md w-full max-w-sm mx-4 md:max-w-md md:px-8">
-            <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Crear Usuari</h2>
-            <form action="#">
+            <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Crear Categoria</h2>
+            <form action="#" enctype="multipart/form-data">
               <div class="flex flex-col mb-4">
-                <label for="email" class="text-lg font-semibold mb-2">Gmail:</label>
-                <input type="email" name="email" id="email" required placeholder="Introdueix el teu gmail" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                <label for="name" class="text-lg font-semibold mb-2">Nom de la categoria:</label>
+                <input type="text" name="name" id="name" required placeholder="Nom..."  class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
               </div>
-      
-              <div class="flex flex-col mb-4">
-                <label for="password" class="text-lg font-semibold mb-2">Contrassenya:</label>
-                <input type="password" name="password" id="password" required placeholder="Introdueix la teva contrassenya" class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
-              </div>
-      
-              <div class="flex flex-col mb-4">
-                <label for="role" class="text-lg font-semibold mb-2">Rol:</label>
-                <input type="text" name="role" id="role" value="user" readonly class="p-4 border-2 border-[#A62735] bg-gray-100 text-gray-600 rounded-lg cursor-not-allowed">
-              </div>
-      
               <div class="flex justify-center">
-                <button type="submit" class="buttons" id="create-user-btn">Crear</button>
+                <button type="submit" class="buttons" id="create-plat-btn">Crear</button>
               </div>
             </form>
           </div>
         </div>
       </section>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script type="module" src="../js/crearUsuari.js"></script>          
 </main>
 </body>
 </html>
