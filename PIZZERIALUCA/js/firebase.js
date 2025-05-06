@@ -147,6 +147,20 @@ export const getPlats = async () => {
     return [];
   }
 };
+export const crearPlat = async (nom, descripcio, preu, imatge, categoria) => {
+  try {
+    await addDoc(collection(db, "plats"), {
+      nom: nom,
+      descripcio: descripcio,
+      preu: preu,
+      imatge: imatge,
+      categoria: categoria,
+    });
+    console.log("Plat creat be:", nom);
+  } catch (error) {
+    console.error("Error en crear plat:", error);
+  }
+};
 
 export const eliminarPlat = async (platId) => {
   try {
