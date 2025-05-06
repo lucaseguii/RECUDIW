@@ -1,0 +1,18 @@
+import { crearCategoria } from "./firebase.js";
+
+$(document).ready(function () {
+    $("#create-categoria-btn").on("click", async (e) => {
+      e.preventDefault();
+      const categoryName = $("#categoria-name").val();
+      if (categoryName) {
+        try {
+          await crearCategoria(categoryName);
+          console.log("Categoria creada be", categoryName);
+          $("#name").val("");
+        } catch (error) {
+          console.log("Error categoria:", error.message);
+        }} else {
+            console.log("El nom de la categoria ha de estar complet");
+          }
+        });
+      });

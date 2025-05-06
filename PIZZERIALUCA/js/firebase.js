@@ -173,3 +173,13 @@ export const getCategories = async () => {
     return [];
   }
 };
+
+export const crearCategoria = async (nom) => {
+  try {
+    await addDoc(collection(db, "categories"), {
+      nom: nom,
+    });
+  } catch (error) {
+    console.error("Error en crear categoria:", error);
+  }
+};
