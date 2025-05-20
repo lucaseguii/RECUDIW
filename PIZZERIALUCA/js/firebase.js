@@ -192,6 +192,7 @@ export const crearCategoria = async (nom) => {
   try {
     await addDoc(collection(db, "categories"), {
       nom: nom,
+      imatge: imatge
     });
   } catch (error) {
     console.error("Error en crear categoria:", error);

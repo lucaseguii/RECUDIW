@@ -6,15 +6,40 @@ $(document).ready(function() {
       const email = $("#email").val();
       const password = $("#password").val();
       const rol = $("#role").val();
-      if (email && password && rol) {
-        try {
-          await crearUsuari(email, password, rol);
-          $("#email").val("");
-          $("#password").val("");
-        } catch (error) {
-          console.log("Error crear usuari:", error.message);
-        }
-      } else {
-        console.log("Tots els inputs han de estar completats");
-      }});
+      const missatgeDiv = $(".missatge");
+
+      missatgeDiv.text("").css("color", "");
+      if(email === ""){
+        missatgeDiv
+        .text("Has de ficar un email")
+        .css("color", "red")
+      return;
+      }
+      if(password === ""){
+        missatgeDiv
+        .text("Has de ficar una contrassenya")
+        .css("color", "red")
+      return;
+      }   
+      if(password.length < 6){
+        missatgeDiv.text("La contrassenya ha tenir 6 caracters minim").css("color", "red");
+        return;
+    } 
+      try {
+        await crearUsuari(email, password, rol);
+        missatgeDiv
+          .text("Usuari creat be.")
+          .css("color", "green")
+        $("#email").val("");
+        $("#password").val("");
+        setTimeout(function () {
+          window.location.href = "../views/usuaris.html";
+        }, 1500);
+      } catch (error) {
+        console.log("Error crear usuari:", error.message);
+        missatgeDiv
+          .text("Error al crear usuari: " + error.message)
+          .css("color", "red")
+      }
+    });
   });
