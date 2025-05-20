@@ -7,7 +7,7 @@ $(document).ready(function () {
       const categoryImage = $("#categoria-imatge").val();
       if (categoryName, categoryImage) {
         try {
-          await crearCategoria(categoryName);
+          await crearCategoria(categoryName, categoryImage);
           console.log("Categoria creada be", categoryName);
           $("#name").val("");
           $("#imatge").val("");

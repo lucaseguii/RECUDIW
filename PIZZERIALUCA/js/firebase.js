@@ -188,7 +188,7 @@ export const getCategories = async () => {
   }
 };
 
-export const crearCategoria = async (nom) => {
+export const crearCategoria = async (nom, imatge) => {
   try {
     await addDoc(collection(db, "categories"), {
       nom: nom,
