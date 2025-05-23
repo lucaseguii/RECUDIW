@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Categoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../scss/common.css">
+</head>
+<body class="bg-[#FDF4E3] text-[#A62735]">
+    <header class="bg-[#A62735] text-[#FDF4E3] pb-4">
+        <div class="flex flex-col items-center justify-center">
+            <img src="../assets/img/logoblack.png" class="w-32 h-32 p-2 md:w-48 md:h-48" alt="Logo">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center">Pizzeria Italiana Luca</h1>
+        </div>
+        <nav>
+            <ul class="flex space-x-8 justify-center mt-4 text-lg md:text-xl">
+                <li><a href="../src/index.html" class="hover:text-white hover:font-extrabold">Inici</a></li>
+                <li><a href="../views/carta.html" class="hover:text-white hover:font-extrabold">Carta</a></li>
+                <li><a href="../views/gestio.html" class="hover:text-white hover:font-extrabold">Gestió</a></li>
+                <li class="hidden"><a href="../views/login.html" class="hover:text-white hover:font-extrabold">Iniciar Sessió</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <main class="p-4 mb-24 flex flex-col justify-center ">
+        <section class="mb-4">
+            <a href="/views/categories.html" class="flex items-center text-[#A62735] hover:text-[#1E7040]">
+                <span class="material-symbols-outlined text-5xl font-extrabold">arrow_back</span>
+            </a>
+        </section>
+        <section class="mx-auto mb-4 w-full max-w-lg">
+            <div class="flex justify-center items-center mb-4">
+                <div class="bg-[#FDF4E3] p-4 rounded-lg shadow-md w-full max-w-sm mx-4 md:max-w-md md:px-8">
+                    <h2 class="text-3xl font-extrabold text-center text-[#A62735] mb-8">Editar Categoria</h2>
+                    <form action="#">
+                        <div class="flex flex-col mb-4">
+                            <label for="categoria-name" class="text-lg font-semibold mb-2">Nom de la categoria:</label>
+                            <input type="text" name="categoria-name" id="categoria-name" required placeholder="Nom..." class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="categoria-imatge" class="text-lg font-semibold mb-2">Imatge de la categoria:</label>
+                            <input type="file" name="categoria-imatge" id="categoria-imatge" placeholder="Imatge..." class="p-4 border-2 border-[#A62735] rounded-lg focus:outline-none transition-all duration-300">
+                            <div id="imatge-preview" class="mt-2"></div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="buttons" id="edit-categoria-btn">Guardar</button>
+                        </div>
+                        <div class="missatge"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="module" src="../js/editarCategoria.js"></script>
+    </main>
+</body>
+</html>

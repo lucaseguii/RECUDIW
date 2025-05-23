@@ -187,6 +187,19 @@ export const getPlatsPerCategoria = async (nomCategoria) => {
     return [];
   }
 };
+
+export const editarPlat = async (platId, updatedPlat) => {
+  try {
+    const platDocRef = doc(db, "plats", platId);
+    await updateDoc(platDocRef, updatedPlat);
+    console.log("Plat actualitzat be");
+  } catch (error) {
+    console.error("Error", error);
+  }
+};
+
+
+
 //categories
 export const getCategories = async () => {
   try {
@@ -210,5 +223,26 @@ export const crearCategoria = async (nom, imatge) => {
     });
   } catch (error) {
     console.error("Error en crear categoria:", error);
+  }
+};
+
+export const eliminarCategoria = async (categoriaId) => {
+  try {
+    console.log("Intentant eliminar categoria amb ID:", categoriaId);
+    const categoriaDocRef = doc(db, "categories", categoriaId);
+    await deleteDoc(categoriaDocRef);
+    console.log("Categoria eliminada be");
+  } catch (error) {
+    console.error("Error eliminant la categoria:", error);
+  }
+};
+
+export const editarCategoria = async (categoriaId, updatedCategoria) =>{
+  try {
+    const categoriaDocRef = doc(db, "categories", categoriaId);
+    await updateDoc(categoriaDocRef, updatedCategoria);
+    console.log("Categoria actualizada be");
+  } catch(error){
+    console.error("Error", error);
   }
 };

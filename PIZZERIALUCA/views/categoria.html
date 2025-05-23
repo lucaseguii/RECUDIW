@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoria</title>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="../scss/common.css">
 </head>
@@ -25,6 +26,11 @@
     </header>
 
     <main class="p-4 mb-24">
+        <section class="mb-4">
+            <a href="/views/carta.html" class="flex items-center text-[#A62735] hover:text-[#1E7040]">
+                <span class="material-symbols-outlined text-5xl font-extrabold">arrow_back</span>
+            </a>
+        </section>
         <section class="text-center mb-4">
             <h2 id="categoria-title" class="text-3xl md:text-4xl font-extrabold mt-8 mb-4"></h2>
             <p class="text-lg md:text-xl text-[#1E7040]">Plats de aquesta categoria:</p>
@@ -40,7 +46,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/checkIfUserIsLogin.js"></script>
     <script type="module" src="../js/logout.js"></script>
-    <script type="module" src="../js/getCategoria.js"></script>
 <script type="module" src="../js/getPlats.js"></script>
 </body>
 </html>
