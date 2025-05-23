@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut  } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"
-  import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
+  import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc, query, where } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"
 
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -165,14 +165,28 @@ export const crearPlat = async (nom, descripcio, preu, imatge, categoria) => {
 export const eliminarPlat = async (platId) => {
   try {
     console.log("Intentant eliminar plat amb ID:", platId);
-    const platDocRef = doc(db, "users", platId);
+    const platDocRef = doc(db, "plats", platId);
     await deleteDoc(platDocRef);
     console.log("plat eliminat be");
   } catch (error) {
     console.error("Error eliminant plat:", error);
   }
 };
-
+export const getPlatsPerCategoria = async (nomCategoria) => {
+  try {
+    const referenciaPlats = collection(db, "plats");
+    const consulta = query(referenciaPlats, where("categoria", "==", nomCategoria));
+    const resultat = await getDocs(consulta);
+    const llistaPlats = [];
+    resultat.forEach((doc) => {
+      llistaPlats.push({ id: doc.id, ...doc.data() });
+    });
+    return llistaPlats;
+  } catch (error) {
+    console.error("Error agafant plats:", error);
+    return [];
+  }
+};
 //categories
 export const getCategories = async () => {
   try {

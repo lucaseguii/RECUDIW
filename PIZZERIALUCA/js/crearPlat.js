@@ -6,7 +6,7 @@ $(document).ready( async function () {
   try {
     const categoriesList = await getCategories();
     categoriesList.forEach((category) => {
-      categorySelect.append(new Option(category.nom, category.id));
+      categorySelect.append(new Option(category.nom, category.nom));
     });
   } catch (error) {
     console.error("Error al cargar las categorías:", error.message);

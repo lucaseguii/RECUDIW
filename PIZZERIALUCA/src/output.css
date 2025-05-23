@@ -396,9 +396,6 @@
   .mb-24 {
     margin-bottom: calc(var(--spacing) * 24);
   }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
-  }
   .ml-\[20px\] {
     margin-left: 20px;
   }
@@ -489,6 +486,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
@@ -497,6 +497,12 @@
   }
   .h-\[200px\] {
     height: 200px;
+  }
+  .h-\[250px\] {
+    height: 250px;
+  }
+  .h-\[300px\] {
+    height: 300px;
   }
   .h-screen {
     height: 100vh;
@@ -516,6 +522,9 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
@@ -524,6 +533,9 @@
   }
   .w-\[100\%\] {
     width: 100%;
+  }
+  .w-\[180px\] {
+    width: 180px;
   }
   .w-full {
     width: 100%;
@@ -669,6 +681,9 @@
   }
   .cursor-not-allowed {
     cursor: not-allowed;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -1205,6 +1220,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -2026,6 +2044,36 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .hover\:scale-101 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 101%;
+        --tw-scale-y: 101%;
+        --tw-scale-z: 101%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-103 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 103%;
+        --tw-scale-y: 103%;
+        --tw-scale-z: 103%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-105 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
   }
   .hover\:font-extrabold {
     &:hover {

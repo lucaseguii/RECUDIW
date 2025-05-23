@@ -12,8 +12,8 @@ $(document).ready(async () => {
             <td class="px-4 py-2 text-[#1E7040] hidden md:table-cell">${plat.preu}</td>
             <td class="px-4 py-2 text-[#1E7040] hidden md:table-cell">${plat.categoria}</td>
             <td class="px-4 py-2">
-              <button class="material-symbols-outlined buttons-admin edit-user-btn" data-userid="${plat.id}">edit</button>
-              <button class="material-symbols-outlined buttons-admin " id="delete-user-btn" data-userid="${plat.id}">delete</button>
+              <button class="material-symbols-outlined buttons-admin edit-plat-btn" data-platid="${plat.id}">edit</button>
+              <button class="material-symbols-outlined buttons-admin delete-plat-btn" data-platid="${plat.id}">delete</button>
             </td>
           </tr>
         `;

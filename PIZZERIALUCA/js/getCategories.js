@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     categories.forEach(categoria => {
         const article = document.createElement("article");
-        article.className = "h-[200px] relative";
+article.className = "block h-[200px] relative cursor-pointer hover:scale-101 transition-transform";            
+article.addEventListener("click", () => {
+            window.location.href = `categoria.html?nom=${encodeURIComponent(categoria.nom)}`;
+        });
         const imgDiv = document.createElement("div");
         imgDiv.className = "h-[200px] w-[100%] bg-cover bg-center absolute -z-10 brightness-50";
         imgDiv.style.backgroundImage = `url('${categoria.imatge}')`;
