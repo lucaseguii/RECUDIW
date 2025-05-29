@@ -58,6 +58,7 @@ export const iniciarSessio = async (email, password) => {
     window.location.href = "../views/gestio.html";
   } catch (error) {
     console.error("Error:", error);
+    throw error;
   }
 };
 

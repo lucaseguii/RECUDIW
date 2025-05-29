@@ -19,10 +19,12 @@ $(document).ready(async () => {
 
     $("#categoria-imatge").on("change", function () {
         const file = this.files[0];
+        const missatgeDiv = $(".missatge");
+        missatgeDiv.text("").css("color", "");
         if (file) {
             const tipusImatge = ["image/jpeg", "image/png", "image/jpg"];
             if (!tipusImatge.includes(file.type)) {
-                $(".missatge").text("La imatge ha de ser jpeg-png-jpg").css("color", "red");
+                missatgeDiv.text("La imatge ha de ser jpeg, png o jpg").css("color", "red");
                 $("#imatge-preview").empty();
                 return;
             }
@@ -35,7 +37,6 @@ $(document).ready(async () => {
             $("#imatge-preview").empty();
         }
     });
-
     $("#edit-categoria-btn").on("click", async (e) => {
         e.preventDefault();
         const missatgeDiv = $(".missatge");
@@ -43,6 +44,20 @@ $(document).ready(async () => {
         const fileInput = $("#categoria-imatge")[0];
         const file = fileInput.files[0];
 
+        missatgeDiv.text("").css("color", "");
+
+        if (!nom) {
+            missatgeDiv.text("Has de ficar el nom de la categoria").css("color", "red");
+            return;
+        }
+        if (file) {
+            const tipusImatge = ["image/jpeg", "image/png", "image/jpg"];
+            if (!tipusImatge.includes(file.type)) {
+                missatgeDiv.text("La imatge ha de ser jpeg, png o jpg").css("color", "red");
+                return;
+            }
+        }
+        
         let imatgeFinal = categoriaActual ? categoriaActual.imatge : "";
 
         if (file) {

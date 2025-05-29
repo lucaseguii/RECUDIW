@@ -10,15 +10,11 @@ $(document).ready(function() {
 
       missatgeDiv.text("").css("color", "");
       if(email === ""){
-        missatgeDiv
-        .text("Has de ficar un email")
-        .css("color", "red")
+        missatgeDiv.text("Has de ficar un email").css("color", "red")
       return;
       }
       if(password === ""){
-        missatgeDiv
-        .text("Has de ficar una contrassenya")
-        .css("color", "red")
+        missatgeDiv.text("Has de ficar una contrassenya").css("color", "red")
       return;
       }   
       if(password.length < 6){
@@ -27,9 +23,7 @@ $(document).ready(function() {
     } 
       try {
         await crearUsuari(email, password, rol);
-        missatgeDiv
-          .text("Usuari creat be.")
-          .css("color", "green")
+      missatgeDiv.text("Usuari creat be.").css("color", "green")
         $("#email").val("");
         $("#password").val("");
         setTimeout(function () {
@@ -37,9 +31,11 @@ $(document).ready(function() {
         }, 1500);
       } catch (error) {
         console.log("Error crear usuari:", error.message);
-        missatgeDiv
-          .text("Error al crear usuari: " + error.message)
-          .css("color", "red")
+            if (error.code === "auth/email-already-in-use") {
+            missatgeDiv.text("Aquest email ja està registrat.").css("color", "red");
+            } else {
+            missatgeDiv.text("Error al crear usuari: " + error.message).css("color", "red");
+            }
       }
     });
   });
